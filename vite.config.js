@@ -3,6 +3,6 @@ import react from "@vitejs/plugin-react";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/NavegaLasRutas-Acevedo/",
   plugins: [react()],
+  base: "https://silvio-acevedo.github.io/NavegaLasRutas-Acevedo/",
 });
