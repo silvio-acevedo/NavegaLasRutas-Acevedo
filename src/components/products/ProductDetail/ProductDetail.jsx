@@ -23,7 +23,6 @@ function ProductDetail() {
         <Loader />;
       </div>
     );
-  if (!producto) return <p>Producto no encontrados.</p>;
 
   return (
     <div className="productDetail">
