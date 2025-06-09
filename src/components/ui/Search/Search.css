@@ -1,0 +1,37 @@
+.search {
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  border-radius: 50px;
+  background: rgba(245, 243, 243, 0.541);
+  transition: 0.4s;
+  overflow: hidden;
+}
+
+.search .textbox {
+  width: 0;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #555;
+  transition: width 0.4s ease;
+  font-size: 16px;
+}
+
+.search:hover .textbox {
+  width: 250px;
+}
+
+.search .icono {
+  border: none;
+  background: #ff4500;
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

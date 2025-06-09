@@ -1,0 +1,71 @@
+.productDetail {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.productDetail img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.productDetail h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #333;
+}
+
+.productDetail p {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #555;
+  max-width: 600px;
+}
+
+.productDetail .precio {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff4500;
+}
+
+.productDetail div {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.productDetail button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.productDetail button:first-child:hover {
+  border-color: #ff4500;
+  background-color: white;
+  color: #ff4500;
+}
+
+.productDetail button:last-child {
+  background-color: #ff4500;
+  color: black;
+}
+
+.productDetail button:last-child:hover {
+  border-color: #ff4500;
+  background-color: white;
+  color: #ff4500;
+}

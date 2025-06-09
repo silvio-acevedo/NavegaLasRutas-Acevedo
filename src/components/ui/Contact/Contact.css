@@ -1,0 +1,17 @@
+.contacto {
+  border: none;
+  background: rgb(210, 210, 210);
+  box-shadow: 0 0 8px rgba(70, 69, 69, 0.5);
+  color: black;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.contacto:hover {
+  box-shadow: 0 0 12px 3px #ff4500;
+}
