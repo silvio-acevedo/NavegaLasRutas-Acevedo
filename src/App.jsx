@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 
 import NavBar from "./components/Layout/NavBar/NavBar";
@@ -10,6 +10,8 @@ import ProductDetail from "./components/products/ProductDetail/ProductDetail";
 
 import Search from "./components/ui/Search/Search";
 import NotFound from "./components/ui/NotFound/NotFound";
+import Cart from "./components/Cart/Cart";
+import CheckoutForm from "./components/Layout/Checkout/Checkout";
 
 function App() {
   return (
@@ -27,6 +29,9 @@ function App() {
             />
             <Route path="/detalle/:id" element={<ProductDetail />} />
             <Route path="/contacto" element={<ContactForm />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<CheckoutForm />} />
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

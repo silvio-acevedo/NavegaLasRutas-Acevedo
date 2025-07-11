@@ -1,12 +1,23 @@
-# React + Vite
+# Proyecto Final - E-commerce React con Firebase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
 
-Currently, two official plugins are available:
+Esta es una Single Page Application (SPA) de e-commerce desarrollada con React. Permite listar productos, filtrar por categorías, ver detalle de cada producto, agregar al carrito y finalizar la compra.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+El proyecto utiliza Firebase Firestore como base de datos para almacenar productos y registrar órdenes de compra.
 
-## Expanding the ESLint configuration
+## Tecnologías utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React (Hooks, Context API, React Router)
+- Firebase (Firestore)
+- CSS para estilos
+- Vite como build tool
+
+## Funcionalidades
+
+- Listado dinámico de productos con filtro por categoría
+- Detalle individual de producto con selector de cantidad (ItemCount)
+- Carrito de compras con agregado, eliminación y resumen de totales
+- Checkout con formulario para completar datos y generar orden en Firestore
+- Navegación SPA sin recargas
+- Feedback visual con Loader durante carga de datos

@@ -1,0 +1,30 @@
+.itemCount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contador {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contador button {
+  padding: 0.3rem 0.7rem;
+  font-size: 1.2rem;
+}
+
+.agregarCarrito {
+  padding: 0.5rem 1rem;
+  background-color: #222;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.agregarCarrito:hover {
+  background-color: #444;
+}

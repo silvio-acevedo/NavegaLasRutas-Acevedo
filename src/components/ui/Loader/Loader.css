@@ -4,6 +4,7 @@
 }
 
 .orbit-spinner {
+  position: relative;
   height: 55px;
   width: 55px;
   border-radius: 50%;

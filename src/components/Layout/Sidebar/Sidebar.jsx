@@ -8,7 +8,7 @@ import {
   BsPhone,
   BsTv,
 } from "react-icons/bs";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import "../Sidebar/Sidebar.css";
 
 function Sidebar() {
@@ -18,43 +18,43 @@ function Sidebar() {
         <h2 className="sidebarTitulo">Categorías</h2>
         <ul className="sidebarLista">
           <li className="sidebarItem">
-            <Link to={"/categoria/camarasDeFotos"}>
+            <Link to={"/categoria/CamarasDeFotos"}>
               <BsCamera />
               Cámaras de fotos
             </Link>
           </li>
           <li className="sidebarItem">
-            <Link to={"/categoria/auriculares"}>
+            <Link to={"/categoria/Auriculares"}>
               <BsHeadphones />
               Auriculares
             </Link>
           </li>
           <li className="sidebarItem">
-            <Link to={"/categoria/consolasJoysticks"}>
+            <Link to={"/categoria/ConsolasJoysticks"}>
               <BsController />
               Consoles y Joysticks
             </Link>
           </li>
           <li className="sidebarItem">
-            <Link to={"/categoria/celularesTablets"}>
+            <Link to={"/categoria/CelularesTablets"}>
               <BsPhone />
               Celulares y Tablets
             </Link>
           </li>
           <li className="sidebarItem">
-            <Link to={"/categoria/laptops"}>
+            <Link to={"/categoria/Laptops"}>
               <BsLaptop />
               Laptops
             </Link>
           </li>
           <li className="sidebarItem">
-            <Link to={"/categoria/computadorasGamers"}>
+            <Link to={"/categoria/ComputadorasGamers"}>
               <BsPcDisplay />
               PC Gamers
             </Link>
           </li>
           <li className="sidebarItem">
-            <Link to={"/categoria/tv"}>
+            <Link to={"/categoria/TV"}>
               <BsTv />
               TV
             </Link>

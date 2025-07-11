@@ -1,0 +1,71 @@
+.checkoutForm {
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.checkoutForm h2 {
+  color: #ff4500;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.checkoutForm label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: #333;
+}
+
+.checkoutForm input {
+  margin-top: 6px;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+}
+
+.checkoutForm button {
+  padding: 0.8rem;
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkoutForm button:hover {
+  background-color: #e03d00;
+}
+
+/* Mensaje de confirmación */
+.checkoutConfimacion {
+  max-width: 500px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #f1f1f1;
+  border-left: 6px solid #ff4500;
+  border-radius: 8px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.checkoutConfimacion h2 {
+  margin-bottom: 1rem;
+  color: #2d2d2d;
+}
+
+.checkoutConfimacion p {
+  font-size: 1.1rem;
+  color: #444;
+}

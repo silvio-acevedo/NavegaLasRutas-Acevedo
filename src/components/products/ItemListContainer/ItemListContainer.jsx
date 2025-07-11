@@ -1,44 +1,50 @@
 import "../ItemListContainer/ItemListContainer.css";
-import Cards from "../Cards/Cards";
-import getProducts from "../../../service/mockService";
-import { useEffect, useState } from "react";
+import ItemList from "../ItemList/ItemList";
 import Loader from "../../ui/Loader/Loader";
-import { useParams } from "react-router";
+
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../../../firebaseConfig";
 
 function ItemListContainer() {
-  const [TodosLosProductos, setTodosLosProductos] = useState([]);
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(false);
 
   const { categoria } = useParams();
 
-  const filtrarProductos = (arrayProductos, categoria) => {
-    if (categoria) {
-      setProductos(
-        arrayProductos.filter(
-          (elem) => elem.categoria.toLowerCase() === categoria?.toLowerCase()
-        )
-      );
-    } else {
-      setProductos(arrayProductos);
-    }
-  };
-
   useEffect(() => {
-    if (TodosLosProductos.length === 0) {
-      setLoading(true);
-      getProducts()
-        .then((resultado) => {
-          setTodosLosProductos(resultado);
-          filtrarProductos(resultado, categoria);
-          setLoading(false);
-        })
-        .catch((err) => {
-          alert(err);
-        });
-    } else {
-      filtrarProductos(TodosLosProductos, categoria);
-    }
+    setLoading(true);
+
+    const itemsRef = collection(db, "items");
+
+    getDocs(itemsRef)
+      .then((res) => {
+        const productosFirebase = res.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+
+        if (categoria) {
+          const categoriaNormalizada = categoria
+            .toLowerCase()
+            .replace(/\s+/g, "");
+          const filtrados = productosFirebase.filter(
+            (prod) =>
+              prod.categoria.toLowerCase().replace(/\s+/g, "") ===
+              categoriaNormalizada
+          );
+          setProductos(filtrados);
+        } else {
+          setProductos(productosFirebase);
+        }
+
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("error al cargar los preductos", err);
+        setLoading(false);
+      });
   }, [categoria]);
 
   return (
@@ -48,7 +54,7 @@ function ItemListContainer() {
           <Loader />
         </div>
       ) : productos.length > 0 ? (
-        productos.map((elem) => <Cards key={elem.id} {...elem} />)
+        <ItemList productos={productos} />
       ) : (
         <p>No se encontrado productos</p>
       )}

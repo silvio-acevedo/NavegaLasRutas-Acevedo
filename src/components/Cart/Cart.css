@@ -1,0 +1,122 @@
+.cart {
+  width: 95%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.cartList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 1.5rem;
+  background-color: #fff;
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+.cartItem img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  background-color: #fff;
+  padding: 4px;
+}
+
+.cartItem div {
+  flex-grow: 1;
+}
+
+.cartItem h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  color: #111;
+}
+
+.cartItem p {
+  margin: 0.2rem 0;
+  color: #444;
+}
+
+.cartItem button {
+  background: rgb(210, 210, 210);
+  border: 1px solid rgb(210, 210, 210);
+  color: black;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.cartItem button:hover {
+  border-color: #ff4500;
+}
+
+.cartResumen {
+  margin-top: 2rem;
+  text-align: right;
+  border-top: 2px solid #eee;
+  padding-top: 1rem;
+}
+
+.cartResumen p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+
+.cartBotones {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.cartBotones .btn,
+.cartBotones button {
+  background: rgb(210, 210, 210);
+  border: 1px solid rgb(210, 210, 210);
+  color: black;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.cartBotones .btn:hover,
+.cartBotones button:hover {
+  border-color: #ff4500;
+}
+
+@media (max-width: 768px) {
+  .cartItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cartResumen,
+  .cartBotones {
+    text-align: left;
+    justify-content: flex-start;
+  }
+}
