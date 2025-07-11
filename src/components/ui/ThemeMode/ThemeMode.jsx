@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { BsBrightnessHigh, BsMoon } from "react-icons/bs";
-import "../ThemeMode/themeMode.css";
+import "../ThemeMode/ThemeMode.css";
 
 function themeMode() {
   const [darkMode, setDarkMode] = useState(false);
